@@ -1,0 +1,2045 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SHRI. SV TRAILER | Luxury Couture, Bridal & Bespoke Tailoring</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <!-- Google Fonts: Cormorant Garamond & Playfair Display for Editorial Luxury + Montserrat for Tracked UI -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ==========================================================================
+       DESIGN TOKENS & LUXURY COUTURE PALETTE
+       ========================================================================== */
+    :root {
+      --sv-black: #0d0d0d;
+      --sv-charcoal: #181716;
+      --sv-ivory: #faf8f5;
+      --sv-cream: #f3efe8;
+      --sv-gold: #c5a059;
+      --sv-gold-light: #e2c588;
+      --sv-gold-dark: #9c7a38;
+      --sv-maroon: #5e1924;
+      --sv-text-dark: #1c1b1a;
+      --sv-text-muted: #6e6963;
+      --sv-border: rgba(197, 160, 89, 0.28);
+      --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+      --font-sans: 'Montserrat', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--sv-ivory);
+      color: var(--sv-text-dark);
+      overflow-x: hidden;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+    }
+
+    h1, h2, h3, h4, .font-serif {
+      font-family: var(--font-serif);
+    }
+
+    .tracking-widest {
+      letter-spacing: 0.22em;
+    }
+
+    .tracking-wider {
+      letter-spacing: 0.14em;
+    }
+
+    .text-gold {
+      color: var(--sv-gold) !important;
+    }
+
+    .bg-luxury-black {
+      background-color: var(--sv-black) !important;
+    }
+
+    .bg-luxury-cream {
+      background-color: var(--sv-cream) !important;
+    }
+
+    /* ==========================================================================
+       TOP ANNOUNCEMENT BAR
+       ========================================================================== */
+    .announcement-bar {
+      background-color: var(--sv-black);
+      color: var(--sv-ivory);
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 9px 15px;
+      border-bottom: 1px solid rgba(197, 160, 89, 0.25);
+      position: relative;
+      z-index: 1035;
+    }
+
+    .announcement-bar span.gold-dot {
+      color: var(--sv-gold);
+      margin: 0 10px;
+    }
+
+    /* ==========================================================================
+       STICKY LUXURY NAVBAR (TRANSPARENT OVER HERO -> SOLID ON SCROLL)
+       ========================================================================== */
+    .sv-navbar {
+      transition: all 0.45s cubic-bezier(0.25, 0.8, 0.25, 1);
+      padding: 16px 0;
+      background: linear-gradient(to bottom, rgba(13, 13, 13, 0.85) 0%, rgba(13, 13, 13, 0.35) 75%, rgba(13, 13, 13, 0) 100%);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .sv-navbar.scrolled {
+      background: rgba(13, 13, 13, 0.97);
+      backdrop-filter: blur(12px);
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(197, 160, 89, 0.35);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    .sv-nav-link {
+      color: var(--sv-ivory) !important;
+      font-size: 0.73rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      padding: 8px 12px !important;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .sv-nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      left: 12px;
+      right: 12px;
+      height: 1px;
+      background-color: var(--sv-gold);
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.35s ease;
+    }
+
+    .sv-nav-link:hover {
+      color: var(--sv-gold-light) !important;
+    }
+
+    .sv-nav-link:hover::after {
+      transform: scaleX(1);
+    }
+
+    .sv-dropdown-menu {
+      background-color: var(--sv-black);
+      border: 1px solid rgba(197, 160, 89, 0.35);
+      border-radius: 0;
+      padding: 12px 0;
+      min-width: 230px;
+      margin-top: 10px;
+    }
+
+    .sv-dropdown-menu .dropdown-item {
+      color: var(--sv-ivory);
+      font-size: 0.7rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 10px 22px;
+      transition: all 0.25s ease;
+    }
+
+    .sv-dropdown-menu .dropdown-item:hover {
+      background-color: rgba(197, 160, 89, 0.14);
+      color: var(--sv-gold-light);
+      padding-left: 26px;
+    }
+
+    .btn-gold-outline {
+      border: 1px solid var(--sv-gold);
+      color: var(--sv-gold-light);
+      background: transparent;
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 9px 20px;
+      border-radius: 0;
+      transition: all 0.35s ease;
+    }
+
+    .btn-gold-outline:hover {
+      background-color: var(--sv-gold);
+      color: var(--sv-black);
+      border-color: var(--sv-gold);
+    }
+
+    .btn-luxury-solid {
+      background-color: var(--sv-black);
+      color: var(--sv-ivory);
+      border: 1px solid var(--sv-black);
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 13px 30px;
+      border-radius: 0;
+      transition: all 0.35s ease;
+    }
+
+    .btn-luxury-solid:hover {
+      background-color: var(--sv-gold);
+      border-color: var(--sv-gold);
+      color: var(--sv-black);
+    }
+
+    /* ==========================================================================
+       HERO EDITORIAL CAROUSEL
+       ========================================================================== */
+    .hero-section {
+      position: relative;
+      height: 92vh;
+      min-height: 620px;
+      background-color: var(--sv-black);
+    }
+
+    .hero-slide {
+      height: 92vh;
+      min-height: 620px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      transform: scale(1.04);
+      transition: transform 8s ease-out;
+      filter: brightness(0.76);
+    }
+
+    .carousel-item.active .hero-bg-img {
+      transform: scale(1);
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(13, 13, 13, 0.85) 0%,
+        rgba(13, 13, 13, 0.3) 45%,
+        rgba(13, 13, 13, 0.45) 100%
+      );
+    }
+
+    .hero-caption {
+      position: absolute;
+      bottom: 11%;
+      left: 0;
+      right: 0;
+      text-align: center;
+      color: var(--sv-ivory);
+      z-index: 5;
+      padding: 0 20px;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.74rem;
+      letter-spacing: 0.34em;
+      text-transform: uppercase;
+      color: var(--sv-gold-light);
+      margin-bottom: 14px;
+      display: inline-block;
+    }
+
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.4rem, 5.5vw, 4.7rem);
+      font-weight: 400;
+      line-height: 1.08;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      text-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
+    }
+
+    .hero-subtitle {
+      font-size: 0.88rem;
+      font-weight: 300;
+      letter-spacing: 0.12em;
+      color: rgba(250, 248, 245, 0.88);
+      max-width: 640px;
+      margin: 0 auto 30px;
+    }
+
+    .hero-btn-primary {
+      background-color: rgba(250, 248, 245, 0.95);
+      color: var(--sv-black);
+      border: 1px solid var(--sv-ivory);
+      padding: 14px 34px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      border-radius: 0;
+      transition: all 0.35s ease;
+    }
+
+    .hero-btn-primary:hover {
+      background-color: var(--sv-gold);
+      border-color: var(--sv-gold);
+      color: var(--sv-black);
+    }
+
+    .hero-btn-secondary {
+      background-color: rgba(13, 13, 13, 0.45);
+      backdrop-filter: blur(4px);
+      color: var(--sv-ivory);
+      border: 1px solid rgba(250, 248, 245, 0.75);
+      padding: 14px 34px;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      border-radius: 0;
+      transition: all 0.35s ease;
+    }
+
+    .hero-btn-secondary:hover {
+      background-color: var(--sv-ivory);
+      color: var(--sv-black);
+    }
+
+    .carousel-indicators [data-bs-target] {
+      width: 34px;
+      height: 2px;
+      background-color: rgba(255, 255, 255, 0.45);
+      border: none;
+      margin: 0 5px;
+    }
+
+    .carousel-indicators .active {
+      background-color: var(--sv-gold);
+    }
+
+    /* ==========================================================================
+       SECTION HEADERS & ORNAMENTAL DIVIDERS
+       ========================================================================== */
+    .section-eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--sv-gold-dark);
+      font-weight: 600;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .section-heading {
+      font-size: clamp(2rem, 3.6vw, 3.1rem);
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--sv-black);
+      margin-bottom: 12px;
+    }
+
+    .ornament-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin: 14px auto 38px;
+    }
+
+    .ornament-line {
+      width: 65px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--sv-gold), transparent);
+    }
+
+    /* ==========================================================================
+       CURATED CATEGORIES (SHOP BY CATEGORY)
+       ========================================================================== */
+    .category-card {
+      position: relative;
+      overflow: hidden;
+      height: 510px;
+      background-color: var(--sv-charcoal);
+      cursor: pointer;
+    }
+
+    .category-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.9s cubic-bezier(0.19, 1, 0.22, 1), filter 0.6s ease;
+      filter: brightness(0.86);
+    }
+
+    .category-card:hover img {
+      transform: scale(1.07);
+      filter: brightness(0.75);
+    }
+
+    .category-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(13, 13, 13, 0.86) 0%, rgba(13, 13, 13, 0.15) 55%, transparent 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 32px 26px;
+      color: var(--sv-ivory);
+    }
+
+    .category-tag {
+      font-size: 0.66rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--sv-gold-light);
+      margin-bottom: 6px;
+    }
+
+    .category-title {
+      font-family: var(--font-serif);
+      font-size: 1.85rem;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+    }
+
+    .category-link {
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--sv-ivory);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid rgba(197, 160, 89, 0.6);
+      padding-bottom: 4px;
+      width: fit-content;
+      transition: color 0.3s ease, gap 0.3s ease;
+    }
+
+    .category-card:hover .category-link {
+      color: var(--sv-gold-light);
+      gap: 14px;
+    }
+
+    /* ==========================================================================
+       SIGNATURE COLLECTION & PRODUCT CARDS
+       ========================================================================== */
+    .filter-tabs .nav-link {
+      color: var(--sv-text-muted);
+      font-size: 0.74rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      border: none;
+      border-bottom: 1px solid transparent;
+      border-radius: 0;
+      padding: 10px 22px;
+      background: transparent;
+      transition: all 0.3s ease;
+    }
+
+    .filter-tabs .nav-link:hover,
+    .filter-tabs .nav-link.active {
+      color: var(--sv-black);
+      border-bottom: 1px solid var(--sv-gold);
+      font-weight: 600;
+    }
+
+    .product-card {
+      background: transparent;
+      border: none;
+      transition: transform 0.35s ease;
+    }
+
+    .product-img-wrap {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 3 / 4;
+      background-color: #ece7df;
+    }
+
+    .product-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.55s ease, transform 0.8s ease;
+    }
+
+    .product-img-wrap img.secondary-img {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+    }
+
+    .product-card:hover .product-img-wrap img.secondary-img {
+      opacity: 1;
+      transform: scale(1.04);
+    }
+
+    .product-card:hover .product-img-wrap img.primary-img {
+      transform: scale(1.04);
+    }
+
+    .product-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background-color: rgba(13, 13, 13, 0.84);
+      color: var(--sv-gold-light);
+      font-size: 0.62rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 5px 11px;
+      z-index: 2;
+    }
+
+    .wishlist-toggle {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(250, 248, 245, 0.9);
+      border: none;
+      color: var(--sv-black);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 3;
+      transition: all 0.3s ease;
+    }
+
+    .wishlist-toggle:hover,
+    .wishlist-toggle.active {
+      background: var(--sv-maroon);
+      color: #fff;
+    }
+
+    .product-actions-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      gap: 1px;
+      transform: translateY(101%);
+      transition: transform 0.38s cubic-bezier(0.25, 0.8, 0.25, 1);
+      z-index: 3;
+    }
+
+    .product-card:hover .product-actions-overlay {
+      transform: translateY(0);
+    }
+
+    .product-actions-overlay button {
+      flex: 1;
+      border: none;
+      padding: 13px 10px;
+      font-size: 0.68rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .btn-quick-view {
+      background: rgba(250, 248, 245, 0.96);
+      color: var(--sv-black);
+    }
+
+    .btn-quick-view:hover {
+      background: var(--sv-cream);
+      color: var(--sv-gold-dark);
+    }
+
+    .btn-add-bag {
+      background: var(--sv-black);
+      color: var(--sv-ivory);
+    }
+
+    .btn-add-bag:hover {
+      background: var(--sv-gold);
+      color: var(--sv-black);
+    }
+
+    /* ==========================================================================
+       ULTRA-LUXURY CONTACT & ATELIER CONSULTATION SECTION
+       ========================================================================== */
+    .contact-atelier-section {
+      background-color: var(--sv-cream);
+      border-top: 1px solid rgba(197, 160, 89, 0.28);
+    }
+
+    .atelier-info-card {
+      background-color: var(--sv-black);
+      color: var(--sv-ivory);
+      border: 1px solid rgba(197, 160, 89, 0.4);
+      padding: 46px 40px;
+      height: 100%;
+    }
+
+    .atelier-detail-item {
+      border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+      padding-bottom: 18px;
+      margin-bottom: 18px;
+    }
+
+    .atelier-detail-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    .contact-form-card {
+      background-color: var(--sv-ivory);
+      border: 1px solid var(--sv-gold);
+      padding: 46px 44px;
+      box-shadow: 0 24px 60px rgba(13, 13, 13, 0.06);
+    }
+
+    .sv-micro-label {
+      font-size: 0.66rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--sv-text-muted);
+      margin-bottom: 7px;
+      display: block;
+    }
+
+    .sv-luxury-input {
+      background-color: #ffffff;
+      border: 1px solid rgba(197, 160, 89, 0.42);
+      border-radius: 0;
+      padding: 13px 16px;
+      font-size: 0.85rem;
+      color: var(--sv-black);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .sv-luxury-input:focus {
+      background-color: #ffffff;
+      border-color: var(--sv-gold-dark);
+      box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.14);
+      outline: none;
+    }
+
+    .btn-gold-submit {
+      background-color: var(--sv-gold);
+      color: var(--sv-black);
+      border: 1px solid var(--sv-gold);
+      font-size: 0.74rem;
+      font-weight: 600;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      padding: 16px 34px;
+      border-radius: 0;
+      transition: all 0.35s ease;
+    }
+
+    .btn-gold-submit:hover {
+      background-color: var(--sv-black);
+      border-color: var(--sv-black);
+      color: var(--sv-gold-light);
+    }
+
+    /* ==========================================================================
+       FULL-SCREEN EDITORIAL LEGAL & AUTHENTICITY PAGE VIEWER
+       ========================================================================== */
+    .legal-page-overlay {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(13, 13, 13, 0.82);
+      backdrop-filter: blur(8px);
+      z-index: 1080;
+      display: none;
+      overflow-y: auto;
+      padding: 36px 16px;
+    }
+
+    .legal-page-overlay.active {
+      display: block;
+      animation: fadeInLegal 0.35s ease;
+    }
+
+    @keyframes fadeInLegal {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .legal-document-sheet {
+      max-width: 920px;
+      margin: 0 auto;
+      background-color: var(--sv-ivory);
+      border: 1px solid var(--sv-gold);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+      position: relative;
+    }
+
+    .legal-doc-header {
+      background-color: var(--sv-black);
+      color: var(--sv-ivory);
+      padding: 44px 48px 38px;
+      border-bottom: 1px solid var(--sv-gold);
+      text-align: center;
+      position: relative;
+    }
+
+    .legal-doc-body {
+      padding: 46px 52px;
+      color: var(--sv-text-dark);
+      line-height: 1.9;
+      font-size: 0.92rem;
+    }
+
+    .legal-doc-body h4 {
+      font-family: var(--font-serif);
+      font-size: 1.55rem;
+      color: var(--sv-black);
+      margin-top: 28px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+      padding-bottom: 6px;
+    }
+
+    .legal-tab-pills .btn {
+      border-radius: 0;
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 9px 18px;
+      border: 1px solid rgba(197, 160, 89, 0.45);
+      color: var(--sv-ivory);
+      background: transparent;
+    }
+
+    .legal-tab-pills .btn.active,
+    .legal-tab-pills .btn:hover {
+      background-color: var(--sv-gold);
+      color: var(--sv-black);
+      border-color: var(--sv-gold);
+      font-weight: 600;
+    }
+
+    @media (max-width: 767.98px) {
+      .legal-doc-header { padding: 34px 22px 28px; }
+      .legal-doc-body { padding: 28px 22px; }
+      .contact-form-card, .atelier-info-card { padding: 30px 22px; }
+    }
+
+    .product-designer {
+      font-size: 0.64rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--sv-gold-dark);
+      margin-bottom: 4px;
+    }
+
+    .product-title {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: var(--sv-black);
+      margin-bottom: 4px;
+      cursor: pointer;
+    }
+
+    .product-title:hover {
+      color: var(--sv-gold-dark);
+    }
+
+    .product-price {
+      font-size: 0.84rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      color: var(--sv-text-muted);
+    }
+
+    /* ==========================================================================
+       BESPOKE ATELIER SPLIT BANNER
+       ========================================================================== */
+    .bespoke-section {
+      background-color: var(--sv-black);
+      color: var(--sv-ivory);
+    }
+
+    .bespoke-img {
+      width: 100%;
+      height: 100%;
+      min-height: 560px;
+      object-fit: cover;
+    }
+
+    .bespoke-content {
+      padding: 64px 8%;
+    }
+
+    .craft-stat {
+      border-left: 1px solid var(--sv-gold);
+      padding-left: 16px;
+    }
+
+    /* ==========================================================================
+       ATELIER JOURNAL / RUNWAY EDITORIAL
+       ========================================================================== */
+    .journal-card {
+      background-color: #ffffff;
+      border: 1px solid rgba(197, 160, 89, 0.2);
+      height: 100%;
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    .journal-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 35px rgba(13, 13, 13, 0.08);
+    }
+
+    .journal-img-wrap {
+      overflow: hidden;
+      height: 310px;
+    }
+
+    .journal-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s ease;
+    }
+
+    .journal-card:hover .journal-img-wrap img {
+      transform: scale(1.06);
+    }
+
+    /* ==========================================================================
+       FOOTER
+       ========================================================================== */
+    .sv-footer {
+      background-color: var(--sv-black);
+      color: rgba(250, 248, 245, 0.78);
+      border-top: 1px solid rgba(197, 160, 89, 0.35);
+      font-size: 0.8rem;
+    }
+
+    .footer-heading {
+      font-family: var(--font-sans);
+      color: var(--sv-gold-light);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      color: rgba(250, 248, 245, 0.72);
+      text-decoration: none;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      transition: color 0.3s ease, padding-left 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--sv-gold);
+      padding-left: 4px;
+    }
+
+    .newsletter-input {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid rgba(197, 160, 89, 0.55);
+      border-radius: 0;
+      color: var(--sv-ivory);
+      padding: 10px 4px;
+      font-size: 0.82rem;
+    }
+
+    .newsletter-input:focus {
+      background: transparent;
+      color: var(--sv-ivory);
+      box-shadow: none;
+      border-color: var(--sv-gold);
+    }
+
+    .newsletter-input::placeholder {
+      color: rgba(250, 248, 245, 0.45);
+    }
+
+    /* ==========================================================================
+       OFFCANVAS CART & MODALS
+       ========================================================================== */
+    .offcanvas-luxury {
+      background-color: var(--sv-ivory);
+      width: 430px !important;
+      max-width: 100vw;
+    }
+
+    .modal-luxury .modal-content {
+      background-color: var(--sv-ivory);
+      border: 1px solid var(--sv-gold);
+      border-radius: 0;
+    }
+
+    /* Toast Notification */
+    .sv-toast {
+      position: fixed;
+      bottom: 26px;
+      right: 26px;
+      background-color: var(--sv-black);
+      color: var(--sv-ivory);
+      border-left: 3px solid var(--sv-gold);
+      padding: 14px 22px;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      z-index: 1090;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+      transform: translateY(120%);
+      opacity: 0;
+      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    .sv-toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    @media (max-width: 991.98px) {
+      .sv-navbar {
+        background: rgba(13, 13, 13, 0.96);
+      }
+      .navbar-collapse {
+        background-color: var(--sv-black);
+        padding: 20px;
+        margin-top: 12px;
+        border: 1px solid rgba(197, 160, 89, 0.25);
+      }
+      .category-card {
+        height: 400px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. TOP ANNOUNCEMENT BAR
+       ======================================================================== -->
+  <div class="announcement-bar text-center">
+    <span>COMPLIMENTARY WORLDWIDE SHIPPING</span>
+    <span class="gold-dot">✦</span>
+    <span class="d-none d-sm-inline">BESPOKE BRIDAL &amp; COUTURE APPOINTMENTS BY SHRI. SV TRAILER</span>
+    <span class="gold-dot d-none d-md-inline">✦</span>
+    <a href="#contact-section" class="text-gold text-decoration-none d-none d-md-inline">BOOK ATELIER VISIT</a>
+  </div>
+
+  <!-- ========================================================================
+       2. SYMMETRICAL CENTERED-LOGO LUXURY NAVBAR (ZERO ICONS)
+       ======================================================================== -->
+  <nav class="navbar navbar-expand-lg fixed-top sv-navbar" id="mainNavbar" style="top: 33px;">
+    <div class="container-fluid px-3 px-lg-5 position-relative">
+      <!-- Mobile Hamburger (Text-styled toggle, no utility icons) -->
+      <button class="navbar-toggler border border-warning border-opacity-50 text-gold shadow-none px-3 py-1 rounded-0" type="button" data-bs-toggle="collapse" data-bs-target="#svNavbarContent" aria-controls="svNavbarContent" aria-expanded="false" aria-label="Toggle navigation" style="font-size: 0.7rem; letter-spacing: 0.2em;">
+        MENU
+      </button>
+
+      <!-- Mobile Centered Brand Logo -->
+      <a class="navbar-brand mx-auto d-lg-none text-center py-0" href="#" aria-label="SHRI. SV TRAILER Home">
+        <svg width="215" height="58" viewBox="0 0 320 86" fill="none" xmlns="http://www.w3.org/2000/svg" role="img">
+          <defs>
+            <linearGradient id="svGoldGradMobile" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#F2DC9B" />
+              <stop offset="45%" stop-color="#C5A059" />
+              <stop offset="100%" stop-color="#9A7632" />
+            </linearGradient>
+          </defs>
+          <g transform="translate(160, 21)">
+            <path d="M0 -18 L22 0 L0 18 L-22 0 Z" stroke="url(#svGoldGradMobile)" stroke-width="1.2" fill="rgba(197,160,89,0.08)" />
+            <path d="M0 -13 L16 0 L0 13 L-16 0 Z" stroke="url(#svGoldGradMobile)" stroke-width="0.7" stroke-dasharray="2 1.5" />
+            <path d="M-7 -18 L-3 -23 L0 -19 L3 -23 L7 -18" stroke="url(#svGoldGradMobile)" stroke-width="1.1" fill="none" />
+            <circle cx="0" cy="-24.5" r="1.3" fill="#F2DC9B" />
+            <path d="M-26 0 C-36 -6, -44 -2, -52 0 C-44 2, -36 6, -26 0 Z" stroke="url(#svGoldGradMobile)" stroke-width="0.9" fill="none" />
+            <path d="M26 0 C36 -6, 44 -2, 52 0 C44 2, 36 6, 26 0 Z" stroke="url(#svGoldGradMobile)" stroke-width="0.9" fill="none" />
+            <circle cx="-56" cy="0" r="1.4" fill="url(#svGoldGradMobile)" />
+            <circle cx="56" cy="0" r="1.4" fill="url(#svGoldGradMobile)" />
+            <text x="0" y="4.5" text-anchor="middle" fill="url(#svGoldGradMobile)" font-family="'Cormorant Garamond', Georgia, serif" font-size="13.5" font-weight="700" letter-spacing="1">SV</text>
+          </g>
+          <text x="160" y="61" text-anchor="middle" fill="#FAF8F5" font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif" font-size="23" font-weight="600" letter-spacing="4.2">
+            SHRI. SV TRAILER
+          </text>
+          <line x1="46" y1="73" x2="104" y2="73" stroke="url(#svGoldGradMobile)" stroke-width="0.7" />
+          <text x="160" y="76" text-anchor="middle" fill="url(#svGoldGradMobile)" font-family="'Montserrat', sans-serif" font-size="7.2" font-weight="500" letter-spacing="3.6">
+            COUTURE &amp; BESPOKE
+          </text>
+          <line x1="216" y1="73" x2="274" y2="73" stroke="url(#svGoldGradMobile)" stroke-width="0.7" />
+        </svg>
+      </a>
+
+      <!-- Symmetrical 3-Column Desktop Layout: Left Nav | Center Logo | Right Nav -->
+      <div class="collapse navbar-collapse" id="svNavbarContent">
+        <div class="w-100 d-lg-grid align-items-center" style="grid-template-columns: 1fr auto 1fr;">
+          <!-- Left Navigation Links -->
+          <ul class="navbar-nav justify-content-lg-start gap-lg-2 mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link sv-nav-link" href="#collections-section" onclick="filterProducts('all')">Collections</a></li>
+            <li class="nav-item"><a class="nav-link sv-nav-link" href="#categories-section" onclick="scrollToCollection('bridal')">Bridal</a></li>
+            <li class="nav-item"><a class="nav-link sv-nav-link" href="#collections-section" onclick="filterProducts('sarees')">Couture</a></li>
+            <li class="nav-item"><a class="nav-link sv-nav-link" href="#bespoke-section">Bespoke</a></li>
+          </ul>
+
+          <!-- Exact Visual Center Brand Logo: SHRI. SV TRAILER -->
+          <a class="navbar-brand mx-auto d-none d-lg-block text-center py-0 px-4" href="#" aria-label="SHRI. SV TRAILER Home">
+            <svg width="255" height="68" viewBox="0 0 320 86" fill="none" xmlns="http://www.w3.org/2000/svg" role="img">
+              <defs>
+                <linearGradient id="svGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#F2DC9B" />
+                  <stop offset="45%" stop-color="#C5A059" />
+                  <stop offset="100%" stop-color="#9A7632" />
+                </linearGradient>
+              </defs>
+              <g transform="translate(160, 21)">
+                <path d="M0 -18 L22 0 L0 18 L-22 0 Z" stroke="url(#svGoldGrad)" stroke-width="1.2" fill="rgba(197,160,89,0.08)" />
+                <path d="M0 -13 L16 0 L0 13 L-16 0 Z" stroke="url(#svGoldGrad)" stroke-width="0.7" stroke-dasharray="2 1.5" />
+                <path d="M-7 -18 L-3 -23 L0 -19 L3 -23 L7 -18" stroke="url(#svGoldGrad)" stroke-width="1.1" fill="none" />
+                <circle cx="0" cy="-24.5" r="1.3" fill="#F2DC9B" />
+                <path d="M-26 0 C-36 -6, -44 -2, -52 0 C-44 2, -36 6, -26 0 Z" stroke="url(#svGoldGrad)" stroke-width="0.9" fill="none" />
+                <path d="M26 0 C36 -6, 44 -2, 52 0 C44 2, 36 6, 26 0 Z" stroke="url(#svGoldGrad)" stroke-width="0.9" fill="none" />
+                <circle cx="-56" cy="0" r="1.4" fill="url(#svGoldGrad)" />
+                <circle cx="56" cy="0" r="1.4" fill="url(#svGoldGrad)" />
+                <text x="0" y="4.5" text-anchor="middle" fill="url(#svGoldGrad)" font-family="'Cormorant Garamond', Georgia, serif" font-size="13.5" font-weight="700" letter-spacing="1">SV</text>
+              </g>
+              <text x="160" y="61" text-anchor="middle" fill="#FAF8F5" font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif" font-size="23" font-weight="600" letter-spacing="4.2">
+                SHRI. SV TRAILER
+              </text>
+              <line x1="46" y1="73" x2="104" y2="73" stroke="url(#svGoldGrad)" stroke-width="0.7" />
+              <text x="160" y="76" text-anchor="middle" fill="url(#svGoldGrad)" font-family="'Montserrat', sans-serif" font-size="7.2" font-weight="500" letter-spacing="3.6">
+                COUTURE &amp; BESPOKE
+              </text>
+              <line x1="216" y1="73" x2="274" y2="73" stroke="url(#svGoldGrad)" stroke-width="0.7" />
+            </svg>
+          </a>
+
+          <!-- Right Navigation Links (Text Only - Heritage, Legal Pages, Contact Us) -->
+          <ul class="navbar-nav justify-content-lg-end gap-lg-2 mb-0">
+            <li class="nav-item"><a class="nav-link sv-nav-link" href="#journal-section">Heritage</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link sv-nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Legal &amp; Provenance
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end sv-dropdown-menu">
+                <li><a class="dropdown-item" href="#privacy-policy" onclick="openLegalPage('privacy'); return false;">Privacy Policy</a></li>
+                <li><a class="dropdown-item" href="#terms-of-couture" onclick="openLegalPage('terms'); return false;">Terms of Couture</a></li>
+                <li><a class="dropdown-item" href="#authenticity-guarantee" onclick="openLegalPage('authenticity'); return false;">Authenticity Guarantee</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link sv-nav-link" href="#contact-section">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========================================================================
+       3. FULL-SCREEN EDITORIAL HERO CAROUSEL
+       ======================================================================== -->
+  <section class="hero-section">
+    <div id="svHeroCarousel" class="carousel slide carousel-fade h-100" data-bs-ride="carousel" data-bs-interval="6000">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#svHeroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#svHeroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#svHeroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+
+      <div class="carousel-inner h-100">
+        <!-- Slide 1: Royal Bridal Couture -->
+        <div class="carousel-item active hero-slide">
+          <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1920&q=85"
+               onerror="this.src='https://placehold.co/1920x1080/181716/c5a059?text=SHRI.+SV+TRAILER+COUTURE'"
+               class="hero-bg-img" alt="Shri. SV Trailer Royal Bridal Couture Lehenga" />
+          <div class="hero-overlay"></div>
+          <div class="hero-caption">
+            <span class="hero-eyebrow">SHRI. SV TRAILER PRESENTS</span>
+            <h1 class="hero-title">The Royal Couture Edit &rsquo;26</h1>
+            <p class="hero-subtitle">Handcrafted zardozi heirloom lehengas, archival weaves, and bespoke ceremonial silhouettes sculpted for timeless grandeur.</p>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+              <a href="#collections-section" class="btn hero-btn-primary">Explore Collection</a>
+              <a href="#contact-section" class="btn hero-btn-secondary">Book An Appointment</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2: Bespoke Bridal Tailoring & Trousseau -->
+        <div class="carousel-item hero-slide">
+          <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1920&q=85"
+               onerror="this.src='https://placehold.co/1920x1080/181716/c5a059?text=SV+BESPOKE+TAILORING'"
+               class="hero-bg-img" alt="Shri. SV Trailer Bespoke Couture Tailoring" />
+          <div class="hero-overlay"></div>
+          <div class="hero-caption">
+            <span class="hero-eyebrow">ATELIER BESPOKE TAILORING</span>
+            <h1 class="hero-title">Architectural Bridal Silhouette</h1>
+            <p class="hero-subtitle">Hand-sculpted corseted blouses, heirloom dupattas, and custom-tailored ceremonial ensembles crafted to your exact measure.</p>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+              <a href="#bespoke-section" class="btn hero-btn-primary">Discover Bespoke</a>
+              <a href="#contact-section" class="btn hero-btn-secondary">Private Salon Visit</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3: Opulent Banarasi & Tissue Sarees -->
+        <div class="carousel-item hero-slide">
+          <img src="https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=1920&q=85"
+               onerror="this.src='https://placehold.co/1920x1080/181716/c5a059?text=SV+HERITAGE+DRAPES'"
+               class="hero-bg-img" alt="Shri. SV Trailer Heritage Couture Sarees" />
+          <div class="hero-overlay"></div>
+          <div class="hero-caption">
+            <span class="hero-eyebrow">HERITAGE HANDLOOM WEAVES</span>
+            <h1 class="hero-title">Noorani: Symphony of Gold</h1>
+            <p class="hero-subtitle">Luminous Banarasi tissue sarees and fluid festive drapes woven with pure zari from the house of Shri. SV Trailer.</p>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+              <a href="#collections-section" onclick="filterProducts('sarees')" class="btn hero-btn-primary">View Couture Sarees</a>
+              <a href="#contact-section" class="btn hero-btn-secondary">Virtual Consultation</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#svHeroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#svHeroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       4. CURATED CATEGORIES GRID ("SHOP BY CATEGORY" - BRIDAL, SAREES, ANARKALIS, BESPOKE)
+       ======================================================================== -->
+  <section id="categories-section" class="py-5 my-4">
+    <div class="container-fluid px-3 px-lg-5">
+      <div class="text-center">
+        <span class="section-eyebrow">Curated Couture Worlds</span>
+        <h2 class="section-heading">Shop By Category</h2>
+        <div class="ornament-divider">
+          <span class="ornament-line"></span>
+          <i class="bi bi-diamond-fill text-gold" style="font-size: 0.65rem;"></i>
+          <span class="ornament-line"></span>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Category 1: Bridal Lehengas -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="category-card" onclick="scrollToCollection('bridal')">
+            <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=900&q=85"
+                 onerror="this.src='https://placehold.co/600x800/181716/c5a059?text=Bridal+Lehengas'"
+                 alt="Bridal Lehengas" />
+            <div class="category-overlay">
+              <span class="category-tag">Heirloom Bridal</span>
+              <h3 class="category-title">Bridal Lehengas</h3>
+              <a href="#collections-section" class="category-link">Explore Edit <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Couture Sarees -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="category-card" onclick="scrollToCollection('sarees')">
+            <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=900&q=85"
+                 onerror="this.src='https://placehold.co/600x800/181716/c5a059?text=Couture+Sarees'"
+                 alt="Couture Sarees" />
+            <div class="category-overlay">
+              <span class="category-tag">Signature Drapes</span>
+              <h3 class="category-title">Couture Sarees</h3>
+              <a href="#collections-section" class="category-link">Explore Edit <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: Anarkalis & Festive Sets -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="category-card" onclick="scrollToCollection('anarkalis')">
+            <img src="https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=900&q=85"
+                 onerror="this.src='https://placehold.co/600x800/181716/c5a059?text=Anarkalis+%26+Festive'"
+                 alt="Anarkalis & Festive Sets" />
+            <div class="category-overlay">
+              <span class="category-tag">Ceremonial Silhouettes</span>
+              <h3 class="category-title">Anarkalis &amp; Festive</h3>
+              <a href="#collections-section" class="category-link">Explore Edit <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 4: Bespoke Tailoring & Trousseau -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="category-card" onclick="document.getElementById('bespoke-section').scrollIntoView({behavior:'smooth'})">
+            <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=900&q=85"
+                 onerror="this.src='https://placehold.co/600x800/181716/c5a059?text=Bespoke+Tailoring'"
+                 alt="Bespoke Tailoring & Trousseau" />
+            <div class="category-overlay">
+              <span class="category-tag">Custom Atelier</span>
+              <h3 class="category-title">Bespoke Tailoring</h3>
+              <a href="#bespoke-section" class="category-link">Discover Atelier <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       5. SIGNATURE BRIDAL & FESTIVE SHOWCASE (FILTERABLE COUTURE GRID)
+       ======================================================================== -->
+  <section id="collections-section" class="py-5 bg-luxury-cream">
+    <div class="container-fluid px-3 px-lg-5">
+      <div class="text-center">
+        <span class="section-eyebrow">Shri. SV Trailer Runway &rsquo;26</span>
+        <h2 class="section-heading">Signature Bridal &amp; Festive</h2>
+        <div class="ornament-divider mb-3">
+          <span class="ornament-line"></span>
+          <i class="bi bi-diamond-fill text-gold" style="font-size: 0.65rem;"></i>
+          <span class="ornament-line"></span>
+        </div>
+
+        <!-- Category Filter Tabs (Only Bridal, Couture Sarees, Anarkalis & Festive) -->
+        <ul class="nav justify-content-center filter-tabs mb-5" id="productFilterTabs">
+          <li class="nav-item">
+            <button class="nav-link active" data-filter="all" onclick="filterProducts('all')">All Couture</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" data-filter="bridal" onclick="filterProducts('bridal')">Bridal Lehengas</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" data-filter="sarees" onclick="filterProducts('sarees')">Couture Sarees</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" data-filter="anarkalis" onclick="filterProducts('anarkalis')">Anarkalis &amp; Festive</button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Dynamic Product Grid -->
+      <div class="row g-4" id="productsGrid">
+        <!-- Rendered cleanly by JavaScript -->
+      </div>
+
+      <div class="text-center mt-5 pt-2">
+        <a href="#contact-section" class="btn btn-luxury-solid">
+          Schedule Private Trousseau Viewing
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       6. THE BESPOKE EXPERIENCE (SPLIT EDITORIAL ATELIER BANNER)
+       ======================================================================== -->
+  <section id="bespoke-section" class="bespoke-section">
+    <div class="container-fluid px-0">
+      <div class="row g-0 align-items-stretch">
+        <div class="col-lg-6">
+          <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1200&q=85"
+               onerror="this.src='https://placehold.co/1000x900/181716/c5a059?text=SHRI.+SV+TRAILER+ATELIER'"
+               class="bespoke-img" alt="Shri. SV Trailer Master Craftsmanship & Tailoring" />
+        </div>
+        <div class="col-lg-6 d-flex align-items-center">
+          <div class="bespoke-content">
+            <span class="section-eyebrow text-gold">The Royal Indian Couture Atelier</span>
+            <h2 class="font-serif display-5 text-white text-uppercase mb-4" style="letter-spacing: 0.05em;">
+              The Bespoke Tailoring Experience
+            </h2>
+            <p class="text-white-50 mb-4" style="line-height: 1.9; font-size: 0.92rem;">
+              At <strong class="text-white">SHRI. SV TRAILER</strong>, every silhouette begins as a personal dialogue between master karigars, bespoke pattern cutters, and you. From architectural hand-draped couture sarees with 42-point anatomical measurements to heirloom bridal lehengas requiring over 3,200 hours of intricate zardozi and resham artistry, each creation is numbered and tailored exclusively to your form.
+            </p>
+
+            <div class="row g-4 mb-5">
+              <div class="col-6 col-sm-4">
+                <div class="craft-stat">
+                  <div class="font-serif fs-2 text-gold">3,200+</div>
+                  <div class="text-uppercase small text-white-50" style="font-size: 0.68rem; letter-spacing: 0.14em;">Artisan Hours</div>
+                </div>
+              </div>
+              <div class="col-6 col-sm-4">
+                <div class="craft-stat">
+                  <div class="font-serif fs-2 text-gold">42-Point</div>
+                  <div class="text-uppercase small text-white-50" style="font-size: 0.68rem; letter-spacing: 0.14em;">Bespoke Fit</div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-4">
+                <div class="craft-stat">
+                  <div class="font-serif fs-2 text-gold">1-on-1</div>
+                  <div class="text-uppercase small text-white-50" style="font-size: 0.68rem; letter-spacing: 0.14em;">Stylist Salon</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex flex-wrap gap-3">
+              <a href="#contact-section" class="btn hero-btn-primary">
+                Book Private Consultation
+              </a>
+              <button type="button" class="btn btn-gold-outline" onclick="openLegalPage('authenticity')">
+                Authenticity Provenance
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       7. THE ATELIER JOURNAL / RUNWAY & CELEBRITY SPOTTING
+       ======================================================================== -->
+  <section id="journal-section" class="py-5 my-4">
+    <div class="container-fluid px-3 px-lg-5">
+      <div class="text-center">
+        <span class="section-eyebrow">Chronicles of Craft &amp; Cinema</span>
+        <h2 class="section-heading">The Atelier Journal</h2>
+        <div class="ornament-divider">
+          <span class="ornament-line"></span>
+          <i class="bi bi-diamond-fill text-gold" style="font-size: 0.65rem;"></i>
+          <span class="ornament-line"></span>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <article class="journal-card">
+            <div class="journal-img-wrap">
+              <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=85"
+                   onerror="this.src='https://placehold.co/800x600/181716/c5a059?text=Royal+Wedding+Chronicles'"
+                   alt="The Jaipur Palace Bridal Showcase" />
+            </div>
+            <div class="p-4">
+              <span class="section-eyebrow" style="font-size: 0.65rem;">Runway Showcase • Nov 2026</span>
+              <h3 class="font-serif fs-3 mb-2">Rambagh Nocturne: Couture Under The Stars</h3>
+              <p class="text-muted small mb-3" style="line-height: 1.75;">
+                Shri. SV Trailer unveils 54 archival silhouettes celebrating crimson velvet, antique badla, and hand-loomed Kanjeevaram borders in Jaipur.
+              </p>
+              <a href="#journal-section" onclick="showToast('Opening Runway Editorial Story')" class="category-link text-dark">Read Story <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-4">
+          <article class="journal-card">
+            <div class="journal-img-wrap">
+              <img src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?auto=format&fit=crop&w=900&q=85"
+                   onerror="this.src='https://placehold.co/800x600/181716/c5a059?text=SV+Bridal+Muse'"
+                   alt="Red Carpet & Celebrity Muses" />
+            </div>
+            <div class="p-4">
+              <span class="section-eyebrow" style="font-size: 0.65rem;">Muses &amp; Red Carpet</span>
+              <h3 class="font-serif fs-3 mb-2">Icons In Custom Shri. SV Trailer</h3>
+              <p class="text-muted small mb-3" style="line-height: 1.75;">
+                A closer look at the sculpted corseted sarees and hand-beaded crystal trails worn by leading cinema icons at the Autumn Gala.
+              </p>
+              <a href="#journal-section" onclick="showToast('Opening Celebrity Muse Gallery')" class="category-link text-dark">Explore Gallery <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-4">
+          <article class="journal-card">
+            <div class="journal-img-wrap">
+              <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=85"
+                   onerror="this.src='https://placehold.co/800x600/181716/c5a059?text=Zardozi+Savoir+Faire'"
+                   alt="The Art of Hand Zardozi" />
+            </div>
+            <div class="p-4">
+              <span class="section-eyebrow" style="font-size: 0.65rem;">Savoir-Faire</span>
+              <h3 class="font-serif fs-3 mb-2">The Legacy of Hand-Spun Zardozi &amp; Mulberry Silk</h3>
+              <p class="text-muted small mb-3" style="line-height: 1.75;">
+                Inside our heritage Varanasi and Jaipur workshops where master karigars embroider real gold-dipped metallic threads onto pure silk.
+              </p>
+              <a href="#authenticity-guarantee" onclick="openLegalPage('authenticity'); return false;" class="category-link text-dark">Verify Craft Provenance <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       8. REDESIGNED ULTRA-LUXURY CONTACT & PRIVATE ATELIER CONSULTATION SECTION
+       ======================================================================== -->
+  <section id="contact-section" class="contact-atelier-section py-5">
+    <div class="container-fluid px-3 px-lg-5 py-4">
+      <div class="text-center mb-5">
+        <span class="section-eyebrow">Private Salon &amp; Bespoke Concierge</span>
+        <h2 class="section-heading">Contact &amp; Atelier Consultation</h2>
+        <div class="ornament-divider mb-2">
+          <span class="ornament-line"></span>
+          <i class="bi bi-diamond-fill text-gold" style="font-size: 0.65rem;"></i>
+          <span class="ornament-line"></span>
+        </div>
+        <p class="text-muted small mx-auto" style="max-width: 620px; letter-spacing: 0.05em;">
+          Reserve a private bridal viewing, custom tailoring measurement session, or virtual styling consultation with a senior couture director at SHRI. SV TRAILER.
+        </p>
+      </div>
+
+      <div class="row g-4 g-lg-5 align-items-stretch">
+        <!-- Left Column: Flagship Atelier Details & Concierge Framing -->
+        <div class="col-lg-5">
+          <div class="atelier-info-card d-flex flex-column justify-content-between">
+            <div>
+              <span class="section-eyebrow text-gold mb-2">The Flagship Couture House</span>
+              <h3 class="font-serif fs-2 text-white text-uppercase mb-4" style="letter-spacing: 0.05em;">
+                SHRI. SV TRAILER ATELIER
+              </h3>
+
+              <div class="atelier-detail-item">
+                <div class="text-gold small text-uppercase tracking-widest mb-1" style="font-size: 0.65rem;">Flagship Salon Address</div>
+                <p class="mb-0 text-white-50 small" style="line-height: 1.75;">
+                  DDA Flats, 127A, Shahpur Jat <br />
+                  New Delhi-110049, India<br />
+                  
+                </p>
+              </div>
+
+              <div class="atelier-detail-item">
+                <div class="text-gold small text-uppercase tracking-widest mb-1" style="font-size: 0.65rem;">Private Concierge Hours</div>
+                <p class="mb-0 text-white-50 small" style="line-height: 1.75;">
+                  Monday – Sunday: 10:00 AM – 8:30 PM IST<br />
+                  After-hours private bridal viewings available upon prior request.
+                </p>
+              </div>
+
+              <div class="atelier-detail-item">
+                <div class="text-gold small text-uppercase tracking-widest mb-1" style="font-size: 0.65rem;">Direct Telephone &amp; WhatsApp</div>
+                <p class="mb-0 text-white small" style="letter-spacing: 0.08em;">
+                  +91 9971834002 &nbsp;|&nbsp; +91 9711716672
+                </p>
+              </div>
+
+             
+            </div>
+
+            <div class="pt-4 mt-3 border-top border-secondary border-opacity-25">
+              <p class="small text-white-50 mb-0" style="font-size: 0.74rem; line-height: 1.7;">
+                All client inquiries, bespoke body measurements, and bridal trousseau schedules are safeguarded under our strict <a href="#privacy-policy" onclick="openLegalPage('privacy'); return false;" class="text-gold text-decoration-underline">Client Privacy Policy</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Spacious Refined Luxury Contact & Appointment Form Card -->
+        <div class="col-lg-7">
+          <div class="contact-form-card h-100">
+            <div id="contactFormWrapper">
+              <div class="d-flex justify-content-between align-items-center mb-4 pb-2 border-bottom border-secondary border-opacity-25">
+                <div>
+                  <span class="section-eyebrow mb-1">Bespoke Request</span>
+                  <h3 class="font-serif fs-3 text-uppercase mb-0">Request Private Consultation</h3>
+                </div>
+                <span class="small text-muted d-none sm-d-inline" style="font-size: 0.68rem; letter-spacing: 0.14em;">RESPONSE WITHIN 4 HRS</span>
+              </div>
+
+              <form id="svLuxuryContactForm" onsubmit="submitLuxuryContact(event)">
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <label for="clientFullName" class="sv-micro-label">Full Name *</label>
+                    <input type="text" id="clientFullName" class="form-control sv-luxury-input" placeholder="e.g., Suresh Kumar Kaushal" required />
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="clientEmail" class="sv-micro-label">Email Address *</label>
+                    <input type="email" id="clientEmail" class="form-control sv-luxury-input" placeholder="sureshkaushal@gmail.com" required />
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="clientPhone" class="sv-micro-label">Phone / WhatsApp Number *</label>
+                    <input type="tel" id="clientPhone" class="form-control sv-luxury-input" placeholder="+91 98XXX XXXXX" required />
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="inquiryService" class="sv-micro-label">Inquiry Type / Service *</label>
+                    <select id="inquiryService" class="form-select sv-luxury-input" required>
+                      <option value="Bridal Couture">Bridal Couture &amp; Lehenga</option>
+                      <option value="Custom Tailoring">Custom Tailoring &amp; Bespoke Fit</option>
+                      <option value="Saree Draping & Trousseau">Saree Draping &amp; Trousseau Curation</option>
+                      <option value="General Inquiry">General Atelier Inquiry</option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="consultationMode" class="sv-micro-label">Preferred Consultation Mode *</label>
+                    <select id="consultationMode" class="form-select sv-luxury-input" required>
+                      <option value="In-Salon Visit">In-Salon Private Visit</option>
+                      <option value="Virtual Video Appointment">Virtual Video Appointment (Worldwide)</option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="preferredDate" class="sv-micro-label">Preferred Date *</label>
+                    <input type="date" id="preferredDate" class="form-control sv-luxury-input" required />
+                  </div>
+
+                  <div class="col-12">
+                    <label for="bespokeNotes" class="sv-micro-label">Bespoke Notes &amp; Occasion Details</label>
+                    <textarea id="bespokeNotes" class="form-control sv-luxury-input" rows="4" placeholder="Share your wedding dates, preferred silhouettes, fabric interests, or custom tailoring notes..."></textarea>
+                  </div>
+
+                  <div class="col-12 pt-2">
+                    <button type="submit" class="btn btn-gold-submit w-100">
+                      Submit Private Consultation Request
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <!-- Interactive Confirmation Feedback State -->
+            <div id="contactConfirmationState" class="text-center py-5 d-none">
+              <div class="mb-3">
+                <span class="d-inline-flex align-items-center justify-content-center border border-warning rounded-circle" style="width: 68px; height: 68px;">
+                  <i class="bi bi-check2 fs-2 text-gold"></i>
+                </span>
+              </div>
+              <span class="section-eyebrow">Confirmed &bull; Dossier Registered</span>
+              <h3 class="font-serif display-6 text-uppercase mb-3">Thank You, <span id="confirmedClientName">Guest</span></h3>
+              <p class="text-muted mx-auto mb-4" style="max-width: 480px; line-height: 1.8;">
+                Your private consultation request for <strong class="text-dark" id="confirmedServiceName">Bridal Couture</strong> via <strong class="text-dark" id="confirmedModeName">In-Salon Visit</strong> has been assigned to a Senior Couture Director at <strong class="text-dark">SHRI. SV TRAILER</strong>.
+              </p>
+              <div class="p-3 bg-white border border-warning border-opacity-50 d-inline-block mb-4 px-4">
+                <span class="small text-uppercase tracking-widest text-muted d-block" style="font-size: 0.62rem;">Reference Token</span>
+                <span class="font-serif fs-4 text-dark fw-semibold" id="confirmedRefCode">SV-2026-8841</span>
+              </div>
+              <div>
+                <button type="button" class="btn btn-luxury-solid" onclick="resetLuxuryContactForm()">
+                  Submit Another Inquiry
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       9. LUXURY MULTI-COLUMN FOOTER ("SHRI. SV TRAILER")
+       ======================================================================== -->
+  <footer class="sv-footer pt-5 pb-4">
+    <div class="container-fluid px-3 px-lg-5">
+      <div class="row g-5 pb-5 border-bottom border-secondary border-opacity-25">
+        <!-- Brand Column + Bespoke Logo -->
+        <div class="col-lg-4">
+          <div class="mb-3">
+            <svg width="235" height="64" viewBox="0 0 320 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g transform="translate(160, 21)">
+                <path d="M0 -18 L22 0 L0 18 L-22 0 Z" stroke="#C5A059" stroke-width="1.2" fill="rgba(197,160,89,0.08)" />
+                <path d="M-7 -18 L-3 -23 L0 -19 L3 -23 L7 -18" stroke="#C5A059" stroke-width="1.1" fill="none" />
+                <path d="M-26 0 C-36 -6, -44 -2, -52 0 C-44 2, -36 6, -26 0 Z" stroke="#C5A059" stroke-width="0.9" fill="none" />
+                <path d="M26 0 C36 -6, 44 -2, 52 0 C44 2, 36 6, 26 0 Z" stroke="#C5A059" stroke-width="0.9" fill="none" />
+                <text x="0" y="4.5" text-anchor="middle" fill="#E2C588" font-family="'Cormorant Garamond', Georgia, serif" font-size="13.5" font-weight="700" letter-spacing="1">SV</text>
+              </g>
+              <text x="160" y="61" text-anchor="middle" fill="#FAF8F5" font-family="'Cormorant Garamond', Georgia, serif" font-size="23" font-weight="600" letter-spacing="4.2">
+                SHRI. SV TRAILER
+              </text>
+              <line x1="46" y1="73" x2="104" y2="73" stroke="#C5A059" stroke-width="0.7" />
+              <text x="160" y="76" text-anchor="middle" fill="#C5A059" font-family="'Montserrat', sans-serif" font-size="7.2" font-weight="500" letter-spacing="3.6">
+                COUTURE &amp; BESPOKE
+              </text>
+              <line x1="216" y1="73" x2="274" y2="73" stroke="#C5A059" stroke-width="0.7" />
+            </svg>
+          </div>
+          <p class="small text-white-50 mb-4" style="line-height: 1.8;">
+            Celebrating Indian heritage craftsmanship, royal bridal couture, and precision bespoke tailoring. Every ensemble is crafted with enduring elegance in our Indian ateliers.
+          </p>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-gold fs-5" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-gold fs-5" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-gold fs-5" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="text-gold fs-5" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+          </div>
+        </div>
+
+        <!-- Couture Categories (No Menswear or Jewellery) -->
+        <div class="col-6 col-md-4 col-lg-2">
+          <h4 class="footer-heading">The House</h4>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#categories-section" onclick="scrollToCollection('bridal')">Bridal Lehengas</a></li>
+            <li><a href="#collections-section" onclick="filterProducts('sarees')">Couture Sarees</a></li>
+            <li><a href="#collections-section" onclick="filterProducts('anarkalis')">Anarkalis &amp; Festive</a></li>
+            <li><a href="#bespoke-section">Bespoke Tailoring</a></li>
+            <li><a href="#journal-section">The Atelier Journal</a></li>
+          </ul>
+        </div>
+
+        <!-- Client Concierge & Legal Pages -->
+        <div class="col-6 col-md-4 col-lg-2">
+          <h4 class="footer-heading">Legal &amp; Client Care</h4>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#contact-section">Book An Appointment</a></li>
+            <li><a href="#privacy-policy" onclick="openLegalPage('privacy'); return false;">Privacy Policy</a></li>
+            <li><a href="#terms-of-couture" onclick="openLegalPage('terms'); return false;">Terms of Couture</a></li>
+            <li><a href="#authenticity-guarantee" onclick="openLegalPage('authenticity'); return false;">Authenticity Guarantee</a></li>
+            <li><a href="#contact-section">Contact Atelier</a></li>
+          </ul>
+        </div>
+
+        <!-- Flagship Boutiques & Newsletter -->
+        <div class="col-md-4 col-lg-4">
+          
+
+          <h4 class="footer-heading mt-4 mb-2">Join The Private List</h4>
+          <form class="d-flex gap-2" onsubmit="event.preventDefault(); showToast('Thank you for subscribing to SHRI. SV TRAILER Private Previews.'); this.reset();">
+            <input type="email" class="form-control newsletter-input" placeholder="Enter your email address" required />
+            <button type="submit" class="btn btn-gold-outline px-3">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center pt-4 small text-white-50">
+        <div>&copy; 2026 <span class="text-gold">SHRI. SV TRAILER</span> COUTURE PVT. LTD. ALL RIGHTS RESERVED.</div>
+        <div class="d-flex flex-wrap gap-4 mt-2 mt-md-0">
+          <a href="#privacy-policy" onclick="openLegalPage('privacy'); return false;" class="text-white-50 text-decoration-none">Privacy Policy</a>
+          <a href="#terms-of-couture" onclick="openLegalPage('terms'); return false;" class="text-white-50 text-decoration-none">Terms of Couture</a>
+          <a href="#authenticity-guarantee" onclick="openLegalPage('authenticity'); return false;" class="text-white-50 text-decoration-none">Authenticity Guarantee</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       10. DEDICATED FULL-SCREEN EDITORIAL LEGAL & AUTHENTICITY PAGE VIEWER
+       ======================================================================== -->
+  <div id="legalPageOverlay" class="legal-page-overlay" role="dialog" aria-modal="true" aria-labelledby="legalDocTitle">
+    <div class="legal-document-sheet">
+      <div class="legal-doc-header">
+        <button type="button" class="btn btn-gold-outline position-absolute top-0 end-0 m-3 px-3 py-1" onclick="closeLegalPage()">
+          Close &times;
+        </button>
+        <span class="section-eyebrow text-gold mb-2" id="legalDocEyebrow">SHRI. SV TRAILER &bull; HOUSE CHARTER</span>
+        <h2 class="font-serif display-5 text-uppercase mb-3" id="legalDocTitle" style="letter-spacing: 0.05em;">Privacy Policy</h2>
+
+        <!-- Quick Switcher Tabs between the 3 Legal Pages -->
+        <div class="d-flex flex-wrap justify-content-center gap-2 legal-tab-pills mt-3">
+          <button type="button" class="btn" id="tab-privacy" onclick="openLegalPage('privacy')">Privacy Policy</button>
+          <button type="button" class="btn" id="tab-terms" onclick="openLegalPage('terms')">Terms of Couture</button>
+          <button type="button" class="btn" id="tab-authenticity" onclick="openLegalPage('authenticity')">Authenticity Guarantee</button>
+        </div>
+      </div>
+
+      <div class="legal-doc-body" id="legalDocContent">
+        <!-- Dynamically injected editorial legal document content -->
+      </div>
+
+      <div class="px-4 py-3 bg-luxury-cream border-top border-secondary border-opacity-25 d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3">
+        <span class="small text-muted">Document Ref: SV-CHARTER-2026 &bull; Verified by SHRI. SV TRAILER Legal &amp; Craft Board</span>
+        <button type="button" class="btn btn-luxury-solid py-2 px-4" onclick="closeLegalPage()">Return To Atelier</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       11. QUICK VIEW COUTURE DOSSIER MODAL (NO CART / BAG)
+       ======================================================================== -->
+  <div class="modal fade modal-luxury" id="quickViewModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-0 pb-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4 pt-2" id="quickViewBody">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Message Box -->
+  <div class="sv-toast" id="svToast"></div>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    /* ========================================================================
+       COUTURE PRODUCT CATALOG DATA (BRIDAL LEHENGAS, COUTURE SAREES, ANARKALIS ONLY)
+       ======================================================================== */
+    const products = [
+      {
+        id: 1,
+        title: "Maharani Crimson Zardozi Lehenga Set",
+        category: "bridal",
+        tag: "Bridal Couture",
+        price: 385000,
+        imgPrimary: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=85",
+        imgSecondary: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=800&q=85",
+        fabric: "Pure Mulberry Silk Velvet with Antique Gold Zardozi & Resham",
+        delivery: "Made to Order • 6–8 Weeks"
+      },
+      {
+        id: 2,
+        title: "Zarina Gold Tissue Banarasi Couture Saree",
+        category: "sarees",
+        tag: "Signature Drape",
+        price: 168000,
+        imgPrimary: "https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=800&q=85",
+        imgSecondary: "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=800&q=85",
+        fabric: "Katan Silk & Real Zari Kadhua Weave with Hand-beaded Blouse",
+        delivery: "Bespoke Blouse Tailoring • 2 Weeks"
+      },
+      {
+        id: 3,
+        title: "Ivory Chandni Pearl & Crystal Anarkali",
+        category: "anarkalis",
+        tag: "Festive Edit",
+        price: 195000,
+        imgPrimary: "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=800&q=85",
+        imgSecondary: "https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=800&q=85",
+        fabric: "Hand-woven Chanderi Silk Organza with Freshwater Pearls",
+        delivery: "Made to Measure • 4 Weeks"
+      },
+      {
+        id: 4,
+        title: "Rajkumari Rose Gold Bridal Lehenga",
+        category: "bridal",
+        tag: "Heirloom Bridal",
+        price: 345000,
+        imgPrimary: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=800&q=85",
+        imgSecondary: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=85",
+        fabric: "Hand-loomed Raw Silk with Dabka, Sequin & Pearl Veil",
+        delivery: "Made to Order • 6–8 Weeks"
+      },
+      {
+        id: 5,
+        title: "Begum Sculpted Corset Couture Saree",
+        category: "sarees",
+        tag: "Runway Signature",
+        price: 178000,
+        imgPrimary: "https://images.unsplash.com/photo-1591604466107-ec97de577aff?auto=format&fit=crop&w=800&q=85",
+        imgSecondary: "https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=800&q=85",
+        fabric: "French Silk Georgette with Hand-embroidered Crystal Corset",
+        delivery: "Custom Tailored • 3 Weeks"
+      },
+      {
+        id: 6,
+        title: "Noorani Emerald & Gold Kalidar Anarkali",
+        category: "anarkalis",
+        tag: "Ceremonial Set",
+        price: 210000,
+        imgPrimary: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=85",
+        imgSecondary: "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=800&q=85",
+        fabric: "32-Kali Pure Silk Organza with Hand-cut Gota Patti & Dupatta",
+        delivery: "Made to Measure • 4 Weeks"
+      }
+    ];
+
+    /* ========================================================================
+       DEDICATED EDITORIAL CONTENT FOR PRIVACY POLICY, TERMS OF COUTURE & AUTHENTICITY GUARANTEE
+       ======================================================================== */
+    const legalDocuments = {
+      privacy: {
+        eyebrow: "SHRI. SV TRAILER • CLIENT CONFIDENTIALITY CHARTER",
+        title: "Privacy Policy",
+        content: `
+          <p class="lead font-serif fs-4 text-dark">
+            At <strong>SHRI. SV TRAILER</strong>, discretion is the cornerstone of true luxury. We treat every client relationship, bridal calendar, and anatomical measurement dossier with absolute confidentiality.
+          </p>
+
+          <h4>1. Client Confidentiality &amp; Bespoke Measurement Protection</h4>
+          <p>
+            When you commission a custom ensemble or schedule a salon fitting with SHRI. SV TRAILER, we collect personal details including your full name, private contact coordinates, wedding or event dates, and 42-point bespoke tailoring measurements. Your physical pattern blocks and measurement archives are encrypted and accessible exclusively to your assigned Senior Couture Director and Master Pattern Cutter.
+          </p>
+
+          <h4>2. Private Salon &amp; Virtual Appointment Discretion</h4>
+          <p>
+            All in-salon bridal viewings and virtual video consultations are conducted in private, non-recorded environments. Photographs, muslin toile fittings, and custom sketch approvals shared during your consultation are never published or disclosed to third parties without your explicit written consent.
+          </p>
+
+          <h4>3. Secure Communication &amp; Global Concierge Logistics</h4>
+          <p>
+            Client contact information is utilized solely to coordinate fittings, share artisan progress milestones, and arrange insured white-glove delivery. SHRI. SV TRAILER never sells, rents, or trades client lists or trousseau preferences to external marketing agencies.
+          </p>
+
+          <h4>4. Data Retention &amp; Client Rights</h4>
+          <p>
+            You may request an export, update, or permanent purge of your personal profile and historical measurement blocks at any time by writing directly to our Data Stewardship Officer at <strong>concierge@shrisvtrailer.in</strong>.
+          </p>
+        `
+      },
+      terms: {
+        eyebrow: "SHRI. SV TRAILER • ATELIER COMMISSION AGREEMENT",
+        title: "Terms of Couture",
+        content: `
+          <p class="lead font-serif fs-4 text-dark">
+            Every creation bearing the <strong>SHRI. SV TRAILER</strong> label is an individually commissioned work of wearable art, handcrafted to order by master Indian artisans.
+          </p>
+
+          <h4>1. Made-to-Order Timelines &amp; Production Milestones</h4>
+          <p>
+            Standard couture sarees and festive Anarkalis require <strong>3 to 4 weeks</strong> for bespoke tailoring, while intricate bridal zardozi lehengas require <strong>6 to 10 weeks</strong> of dedicated karigar craftsmanship. Expedited bridal commissions are subject to atelier capacity approval prior to order confirmation.
+          </p>
+
+          <h4>2. Custom Fitting Clauses &amp; 42-Point Tailoring</h4>
+          <p>
+            Each garment is cut and constructed to the client&rsquo;s verified 42-point anatomical measurements or selected standard couture sizing. Complimentary minor silhouette refinements are included within 30 days of final delivery at any SHRI. SV TRAILER flagship salon.
+          </p>
+
+          <h4>3. Handloom Textile &amp; Hand-Embroidery Variations</h4>
+          <p>
+            Because our textiles are hand-woven on traditional looms and embroidered entirely by hand using pure zari, resham, and pearls, subtle organic variations in weave tension, sheen, or motif placement are inherent hallmarks of authentic handcraftsmanship rather than defects.
+          </p>
+
+          <h4>4. Payment Milestones &amp; Non-Returnable Bespoke Policy</h4>
+          <p>
+            Bespoke couture commissions require a <strong>60% atelier retainer</strong> upon pattern initiation, with the remaining <strong>40% balance</strong> payable prior to final dispatch or salon handover. Due to the personalized nature of custom measurements and hand-crafted embroidery, bespoke commissions are non-returnable and non-refundable once fabric cutting has commenced.
+          </p>
+        `
+      },
+      authenticity: {
+        eyebrow: "SHRI. SV TRAILER • HERITAGE PROVENANCE & HALLMARK",
+        title: "Authenticity Guarantee",
+        content: `
+          <p class="lead font-serif fs-4 text-dark">
+            Every authentic <strong>SHRI. SV TRAILER</strong> ensemble is accompanied by a serialized Certificate of Provenance and tamper-evident gold crest seal verifying its origin in our Indian ateliers.
+          </p>
+
+          <h4>1. Serialized Hologram Seal &amp; Woven Atelier Label</h4>
+          <p>
+            Each garment features an individually numbered woven satin &amp; metallic gold thread label sewn into the interior lining, paired with a micro-engraved <strong>SHRI. SV TRAILER</strong> hologram seal. This unique serial number permanently logs your ensemble in our House Archive.
+          </p>
+
+          <h4>2. Master Karigar Certificate of Origin</h4>
+          <p>
+            Your couture dossier includes a signed Certificate of Origin detailing the craft cluster provenance (such as Varanasi handloom weaving or Jaipur antique zardozi), total artisan hours invested, and the signature of our Head Master Tailor.
+          </p>
+
+          <h4>3. Pure Mulberry Silk &amp; Real Zari Verification</h4>
+          <p>
+            We guarantee that every silk textile is 100% pure natural mulberry, katan, or chanderi silk—never synthetic polyester blends—and that our signature gold work utilizes authentic silver-gilt zari, antique badla, and genuine freshwater pearls.
+          </p>
+
+          <h4>4. Lifetime Heirloom Restoration &amp; Verification</h4>
+          <p>
+            Registered owners of SHRI. SV TRAILER couture enjoy lifetime access to our Heirloom Preservation &amp; Restoration service, ensuring your bridal lehenga or Banarasi saree remains pristine across generations. To verify any serial number, contact <strong>concierge@shrisvtrailer.in</strong>.
+          </p>
+        `
+      }
+    };
+
+    const formatINR = (amount) => "₹" + amount.toLocaleString("en-IN");
+
+    /* ========================================================================
+       STICKY NAVBAR SCROLL TRANSITION
+       ======================================================================== */
+    window.addEventListener("scroll", () => {
+      const navbar = document.getElementById("mainNavbar");
+      if (window.scrollY > 45) {
+        navbar.classList.add("scrolled");
+        navbar.style.top = "0px";
+      } else {
+        navbar.classList.remove("scrolled");
+        navbar.style.top = "33px";
+      }
+    });
+
+    /* ========================================================================
+       RENDER FILTERABLE COUTURE PRODUCTS (NO BAG/CART OR WISHLIST ICONS)
+       ======================================================================== */
+    function renderProducts(categoryFilter = "all") {
+      const grid = document.getElementById("productsGrid");
+      const filtered = categoryFilter === "all"
+        ? products
+        : products.filter((p) => p.category === categoryFilter);
+
+      grid.innerHTML = filtered.map((product) => `
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <span class="product-badge">${product.tag}</span>
+              <img src="${product.imgPrimary}"
+                   onerror="this.src='https://placehold.co/600x800/ece7df/181716?text=SHRI.+SV+TRAILER'"
+                   class="primary-img" alt="${product.title}" />
+              <img src="${product.imgSecondary}"
+                   onerror="this.src='https://placehold.co/600x800/ece7df/181716?text=COUTURE+DETAIL'"
+                   class="secondary-img" alt="${product.title} Detail" />
+              <div class="product-actions-overlay">
+                <button type="button" class="btn-quick-view" onclick="openQuickView(${product.id})">View Couture Dossier</button>
+                <button type="button" class="btn-add-bag" onclick="inquireCouturePiece('${product.title.replace(/'/g, "\\'")}')">Inquire Bespoke</button>
+              </div>
+            </div>
+            <div class="product-meta">
+              <div class="product-designer">SHRI. SV TRAILER</div>
+              <h3 class="product-title" onclick="openQuickView(${product.id})">${product.title}</h3>
+              <div class="product-price">${formatINR(product.price)}</div>
+            </div>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    function filterProducts(category) {
+      document.querySelectorAll("#productFilterTabs .nav-link").forEach((btn) => {
+        btn.classList.toggle("active", btn.dataset.filter === category);
+      });
+      renderProducts(category);
+    }
+
+    function scrollToCollection(category) {
+      filterProducts(category);
+      document.getElementById("collections-section").scrollIntoView({ behavior: "smooth" });
+    }
+
+    function inquireCouturePiece(title) {
+      const notesField = document.getElementById("bespokeNotes");
+      if (notesField) {
+        notesField.value = `I would like to schedule a private consultation regarding: ${title}.`;
+      }
+      document.getElementById("contact-section").scrollIntoView({ behavior: "smooth" });
+      showToast(`Selected "${title}" for your private consultation inquiry.`);
+    }
+
+    /* ========================================================================
+       FULL-SCREEN LEGAL & AUTHENTICITY PAGE VIEWER LOGIC
+       ======================================================================== */
+    function openLegalPage(pageKey) {
+      const doc = legalDocuments[pageKey];
+      if (!doc) return;
+
+      document.getElementById("legalDocEyebrow").textContent = doc.eyebrow;
+      document.getElementById("legalDocTitle").textContent = doc.title;
+      document.getElementById("legalDocContent").innerHTML = doc.content;
+
+      ["privacy", "terms", "authenticity"].forEach((key) => {
+        const btn = document.getElementById(`tab-${key}`);
+        if (btn) btn.classList.toggle("active", key === pageKey);
+      });
+
+      const overlay = document.getElementById("legalPageOverlay");
+      overlay.classList.add("active");
+      overlay.scrollTop = 0;
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeLegalPage() {
+      const overlay = document.getElementById("legalPageOverlay");
+      overlay.classList.remove("active");
+      document.body.style.overflow = "";
+    }
+
+    // Close legal view on Escape key
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        closeLegalPage();
+      }
+    });
+
+    /* ========================================================================
+       LUXURY CONTACT FORM SUBMISSION & CONFIRMATION STATE
+       ======================================================================== */
+    function submitLuxuryContact(e) {
+      e.preventDefault();
+      const name = document.getElementById("clientFullName").value.trim();
+      const service = document.getElementById("inquiryService").value;
+      const mode = document.getElementById("consultationMode").value;
+      const refNum = "SV-2026-" + Math.floor(1000 + Math.random() * 9000);
+
+      document.getElementById("confirmedClientName").textContent = name;
+      document.getElementById("confirmedServiceName").textContent = service;
+      document.getElementById("confirmedModeName").textContent = mode;
+      document.getElementById("confirmedRefCode").textContent = refNum;
+
+      document.getElementById("contactFormWrapper").classList.add("d-none");
+      document.getElementById("contactConfirmationState").classList.remove("d-none");
+      showToast("Your private consultation request has been registered with SHRI. SV TRAILER.");
+    }
+
+    function resetLuxuryContactForm() {
+      document.getElementById("svLuxuryContactForm").reset();
+      document.getElementById("contactConfirmationState").classList.add("d-none");
+      document.getElementById("contactFormWrapper").classList.remove("d-none");
+    }
+
+    /* ========================================================================
+       QUICK VIEW COUTURE DOSSIER MODAL
+       ======================================================================== */
+    function openQuickView(id) {
+      const p = products.find((item) => item.id === id);
+      const body = document.getElementById("quickViewBody");
+      body.innerHTML = `
+        <div class="row g-4 align-items-center">
+          <div class="col-md-6">
+            <img src="${p.imgPrimary}" class="w-100" style="aspect-ratio: 3/4; object-fit: cover;" alt="${p.title}" />
+          </div>
+          <div class="col-md-6">
+            <span class="section-eyebrow">SHRI. SV TRAILER &bull; ${p.tag}</span>
+            <h3 class="font-serif fs-2 mb-2">${p.title}</h3>
+            <div class="fs-5 fw-semibold text-gold mb-3">${formatINR(p.price)} <span class="small text-muted fw-normal">(Incl. of all taxes)</span></div>
+            <p class="small text-muted mb-3" style="line-height: 1.75;">
+              <strong>Craft &amp; Textile:</strong> ${p.fabric}<br/>
+              <strong>Atelier Timeline:</strong> ${p.delivery}<br/>
+              <strong>Provenance:</strong> Includes Serialized Authenticity Guarantee Seal
+            </p>
+            <div class="mb-4">
+              <label class="sv-micro-label">Tailoring Specification</label>
+              <select class="form-select sv-luxury-input">
+                <option value="Custom Bespoke">42-Point Custom Bespoke Measurement</option>
+                <option value="XS (34)">Couture Standard XS (34)</option>
+                <option value="S (36)">Couture Standard S (36)</option>
+                <option value="M (38)">Couture Standard M (38)</option>
+                <option value="L (40)">Couture Standard L (40)</option>
+              </select>
+            </div>
+            <button type="button" class="btn btn-gold-submit w-100 mb-2" data-bs-dismiss="modal" onclick="inquireCouturePiece('${p.title.replace(/'/g, "\\'")}')">
+              Book Private Consultation For This Piece
+            </button>
+            <button type="button" class="btn btn-outline-dark rounded-0 w-100 small text-uppercase tracking-wider py-2" data-bs-dismiss="modal" onclick="openLegalPage('authenticity')">
+              View Authenticity Guarantee
+            </button>
+          </div>
+        </div>
+      `;
+      new bootstrap.Modal(document.getElementById("quickViewModal")).show();
+    }
+
+    /* ========================================================================
+       TOAST MESSAGE HELPER
+       ======================================================================== */
+    let toastTimer;
+    function showToast(message) {
+      const toast = document.getElementById("svToast");
+      toast.textContent = message;
+      toast.classList.add("show");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toast.classList.remove("show");
+      }, 3600);
+    }
+
+    // Initialize on load
+    window.addEventListener("DOMContentLoaded", () => {
+      renderProducts("all");
+    });
+  </script>
+</body>
+</html>
